@@ -1,0 +1,28 @@
+Works done
+API && errId && disconnection spin
+1) Set Expiry date
+2) Allocate memory
+3) Change Password
+4) Edit User
+5) Activate User
+6) Edit store
+7) Loose Link
+8) Link Store to User
+9) Set Expiry date
+10) User to List
+11) Store List
+
+
+Works to do
+=================
+Validate fields === this is done
+clear localstore after logging out | this one is done by a hook
+result page to be updated
+
+access level dealth with
+
+password validation
+
+Check Validation for Email address. it does not accept dot in it.
+
+
