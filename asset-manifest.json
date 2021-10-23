@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/EposCompany/ectouchofficeadmin.git/static/css/main.5e4e9510.chunk.css",
+    "main.js": "/EposCompany/ectouchofficeadmin.git/static/js/main.da0c638e.chunk.js",
+    "main.js.map": "/EposCompany/ectouchofficeadmin.git/static/js/main.da0c638e.chunk.js.map",
+    "runtime-main.js": "/EposCompany/ectouchofficeadmin.git/static/js/runtime-main.e2be1803.js",
+    "runtime-main.js.map": "/EposCompany/ectouchofficeadmin.git/static/js/runtime-main.e2be1803.js.map",
+    "static/js/2.87337f43.chunk.js": "/EposCompany/ectouchofficeadmin.git/static/js/2.87337f43.chunk.js",
+    "static/js/2.87337f43.chunk.js.map": "/EposCompany/ectouchofficeadmin.git/static/js/2.87337f43.chunk.js.map",
+    "index.html": "/EposCompany/ectouchofficeadmin.git/index.html",
+    "precache-manifest.4b163a7aef39633f713c705137d9862f.js": "/EposCompany/ectouchofficeadmin.git/precache-manifest.4b163a7aef39633f713c705137d9862f.js",
+    "service-worker.js": "/EposCompany/ectouchofficeadmin.git/service-worker.js",
+    "static/css/main.5e4e9510.chunk.css.map": "/EposCompany/ectouchofficeadmin.git/static/css/main.5e4e9510.chunk.css.map",
+    "static/js/2.87337f43.chunk.js.LICENSE.txt": "/EposCompany/ectouchofficeadmin.git/static/js/2.87337f43.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2be1803.js",
+    "static/js/2.87337f43.chunk.js",
+    "static/css/main.5e4e9510.chunk.css",
+    "static/js/main.da0c638e.chunk.js"
+  ]
+}
