@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ectouchofficeadmin/precache-manifest.802bb5a1b946e4c729d8d3fddf3ceb13.js"
+  "/ectouchofficeadmin/precache-manifest.b532f359d68461d93769bb074611d634.js"
 );
 
 self.addEventListener('message', (event) => {
