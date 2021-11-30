@@ -84,6 +84,7 @@ export default function StoreList() {
             <TableRow>
               <StyledTableCell>Store id</StyledTableCell>
               <StyledTableCell>Store name</StyledTableCell>
+              <StyledTableCell>Expiry date</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -96,6 +97,7 @@ export default function StoreList() {
                   {row.id}
                 </StyledTableCell>
                 <StyledTableCell>{row.name}</StyledTableCell>
+                <StyledTableCell>{row.expiry}</StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>

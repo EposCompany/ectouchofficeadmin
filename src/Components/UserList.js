@@ -78,6 +78,7 @@ export default function UserList() {
               <StyledTableCell>User id</StyledTableCell>
               <StyledTableCell>User First name</StyledTableCell>
               <StyledTableCell>User Surname</StyledTableCell>
+              <StyledTableCell>User Email</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -91,6 +92,7 @@ export default function UserList() {
                 </StyledTableCell>
                 <StyledTableCell>{row.fname}</StyledTableCell>
                 <StyledTableCell>{row.sname}</StyledTableCell>
+                <StyledTableCell>{row.email}</StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>

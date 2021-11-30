@@ -60,29 +60,58 @@ export default function AddUser() {
     setPassword2(e.target.value);
   };
 
+  function isNumeric(str) {
+    if (typeof str != "string") return false // we only process strings!  
+    return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+      !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+  }
+
   async function btnSubmit_Click(e) {
-    // api will run here and the result will be set
-    //  console.log(email);
+    let myMessage = "Failed !!!!!";
     if (!myUtils.ValidateEmail(email)) {
-      //     console.log("invalid email");
       setError("Email address is invalid");
     } else {
-      console.log("request made");
-      setLoading(true);
-      let res = await ApiComms.AddUser({
-        fname: fname === "" ? " " : fname,
-        sname: sname === "" ? " " : sname,
-        telephone: telephone,
-        email: email,
-        password: password1,
-      });
-      console.log("sdfgssdfgs");
-      setLoading(false);
-      console.log("res:::");
-      console.log(res);
-      let myMessage = "Failed !!!!!";
-      if (res !== null && res.resultcode === 0) {
-        myMessage = "Successful ;)";
+      if (!password1 || (password1 !== password2)) {
+        myMessage = "Password mismatch!";
+        console.log(myMessage);
+      }
+      else {
+        if (!isNumeric(telephone)) {
+          myMessage = "Wrong Value for Telephone";
+          console.log(myMessage);
+        }
+        else {
+          console.log("FindUserByEmail made");
+          setLoading(true);
+          let res1 = await ApiComms.FindUserByEmail({
+            email: email
+          });
+          if (res1 !== null && res1.resultcode !== 0) {
+            console.log("AddUser made");
+            var res = await ApiComms.AddUser({
+              fname: fname === "" ? " " : fname,
+              sname: sname === "" ? " " : sname,
+              telephone: telephone,
+              email: email,
+              password: password1,
+            });
+            setLoading(false);
+            console.log("res:::");
+            console.log(res);
+            if (res !== null && res.resultcode === 0) {
+              console.log("AddUser Successful");
+              myMessage = "Successful ;)";
+            }
+            else {
+              console.log("AddUser NOT made: " + res.message);
+              myMessage = "Failed. " + res.message;
+            }
+          }
+          else {
+            console.log("FindUserByEmail NOT made");
+            myMessage = "User already exist ...";
+          }
+        }
       }
       history.push({
         pathname: "/home",
@@ -147,7 +176,7 @@ export default function AddUser() {
             onChange={txtPassword1_Change}
             type="password"
             fullWidth
-            //          autoComplete="current-password"
+          //          autoComplete="current-password"
           />
         </Grid>
         <Grid item xs={12} sm={6}>

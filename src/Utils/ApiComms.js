@@ -43,6 +43,32 @@ const ApiComms = {
     return myJson;
   },
 
+  FindUserByEmail: async function GetFindUserByEmail(user) {
+    const options = {
+      method: "GET",
+      headers: new Headers({
+        "content-type": "text/plain",
+      }),
+    };
+
+    const url =
+      baseApiAddress +
+      "/v1/users/find/userby/email=" +
+      user.email;
+
+    var myJson = null;
+    console.log(url);
+    try {
+      var response = await fetch(url, options);
+      myJson = await response.json();
+    } catch (e) {
+      console.log("error cought");
+      myJson = null;
+    }
+    console.log(myJson);
+    return myJson;
+  },
+
   AddUser: async function PostAddUser(user) {
     const options = {
       method: "POST",
